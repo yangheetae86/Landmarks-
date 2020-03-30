@@ -1,10 +1,3 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-The scene delegate.
-*/
-
 import UIKit
 import SwiftUI
 
@@ -20,7 +13,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: LandmarkList())
+            window.rootViewController = UIHostingController(
+                rootView: LandmarkList()
+                    .environmentObject(UserData())
+            )
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -56,3 +52,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+
+struct SceneDelegate_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}

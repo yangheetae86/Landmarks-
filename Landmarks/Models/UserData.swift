@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-final class UserData: ObservableObject {
-    @Published var showFavoritesOnly: Bool = false
-    @Published var landmarks = landmarkData
+final class UserData: ObservableObject { //Protocol
+    @Published var showFavoritesOnly: Bool = false //Generic Structure
+    @Published var landmarks = landmarkData //Generic Structure
 }
