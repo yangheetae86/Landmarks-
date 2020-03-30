@@ -16,7 +16,7 @@ var body: some View {
                         }
                     }
                 }
-            }
+       }
             .navigationBarTitle(Text("Landmarks"))
         }
     }
